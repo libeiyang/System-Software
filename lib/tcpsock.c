@@ -47,16 +47,7 @@
 #define    TYPE                 SOCK_STREAM     // streaming protool type
 #define    PROTOCOL             IPPROTO_TCP     // TCP protocol
 
-/**
- * Structure for holding the TCP socket information
- */
-struct tcpsock {
-    long cookie;        /**< if the socket is bound, cookie should be equal to MAGIC_COOKIE */
-    // remark: the use of magic cookies doesn't guarantee a 'bullet proof' test
-    int sd;             /**< socket descriptor */
-    char *ip_addr;      /**< socket IP address */
-    int port;           /**< socket port number */
-};
+
 
 static tcpsock_t *tcp_sock_create();
 
